@@ -239,6 +239,11 @@ RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
 ```
+Worked on Ubuntu/Apache/PLESK
+```
+RewriteEngine on
+RewriteRule (^\.|/\.) - [F]
+```
 
 Alternatively, you can just raise a “Not Found” error, giving the attacker no clue:
 ``` apacheconf
